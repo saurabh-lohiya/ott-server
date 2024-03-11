@@ -8,6 +8,7 @@ import {
   Put,
   Delete,
   UseGuards,
+  UseInterceptors,
 } from '@nestjs/common';
 import { Movie } from './entities/movie.entity';
 import { MoviesService } from './movies.service';
@@ -15,6 +16,7 @@ import { AuthGuard } from './../auth/auth.guard';
 import { RolesGuard } from './../auth/roles.guard';
 import { Roles } from './../auth/roles.decorator';
 import { Role } from './../auth/role.enum';
+import { CacheInterceptor, CacheTTL } from '@nestjs/cache-manager';
 
 @Controller('movies')
 export class MoviesController {
@@ -30,6 +32,8 @@ export class MoviesController {
     return this.moviesService.getMovie(id);
   }
 
+  @UseInterceptors(CacheInterceptor)
+  @CacheTTL(120)
   @Get()
   async getAllMovies(): Promise<Movie[]> {
     return this.moviesService.getAllMovies();

@@ -3,10 +3,13 @@
 1. Clone the repository to your local machine.
 2. Navigate to the project directory.
 3. Guide to creating a mongo cluster `https://www.mongodb.com/docs/atlas/getting-started/`
-4. whitelist all the Ips for the cluster.
-5. Create a `.env` file taking reference to `.env.example`
-5. Install the dependencies by running `npm install`
-6. Start the application by running `npm run start`.
+4. Get the mongo username and password and store it in `.env`.
+5. whitelist all the Ips for the cluster.
+6. Install Redis For Caching
+7. run `redis-server` on seperate terminal in `rootdir`
+8. Create a `.env` file taking reference to `.env.example`
+9. Install the dependencies by running `npm install`
+10. Start the application by running `npm run start`.
 
 
 # API Endpoints
