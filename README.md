@@ -28,7 +28,7 @@ GET /movies/:id: Retrieve details of a specific movie.
 PUT /movies/:id: Update a specific movie.  
 DELETE /movies/:id: Delete a specific movie.  
 
-## Auth Endpoints
+## Auth
 
 POST /auth/login: Authenticate a user and return a JWT.  
 POST /auth/register: Register a new user.  
