@@ -14,6 +14,7 @@ export const config = {
   mongoPass: process.env.MONGO_PASS,
   mongoUrl: process.env.MONGO_URL,
   dbName: process.env.DB_NAME,
+  jwtSecret: process.env.JWT_SECRET,
 };
 
 export default config;
