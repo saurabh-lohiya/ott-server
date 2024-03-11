@@ -30,7 +30,7 @@ export class UsersController {
     return this.usersService.googleLogin(token);
   }
 
-  @Post('new')
+  @Post()
   async createUser(@Body() user: User): Promise<User> {
     return this.usersService.createUser(user);
   }

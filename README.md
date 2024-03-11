@@ -1,4 +1,4 @@
-## Setup Instructions
+# Setup Instructions
 
 1. Clone the repository to your local machine.
 2. Navigate to the project directory.
@@ -31,7 +31,6 @@ DELETE /movies/:id: Delete a specific movie.
 ## Auth
 
 POST /auth/login: Authenticate a user and return a JWT.  
-POST /auth/register: Register a new user.  
 
 ## Installation
 
